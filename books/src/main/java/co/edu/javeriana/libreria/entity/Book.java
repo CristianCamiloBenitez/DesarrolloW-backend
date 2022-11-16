@@ -19,6 +19,8 @@ public class Book {
     @NotBlank
     private String author;
 
+    private Integer cantidad;
+
     public String getName() { return this.Name;}
     public void setName(String name) { this.Name = name;}
 
@@ -33,4 +35,7 @@ public class Book {
 
     public Integer getId() { return  this.Id;}
     public void setId(Integer Id) { this.Id = Id;}
+
+    public Integer getCantidad() {return this.cantidad;}
+    public void setCantidad(Integer cantidad) {this.cantidad = cantidad;}
 }
