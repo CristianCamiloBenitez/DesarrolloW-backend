@@ -9,32 +9,36 @@ public class Book {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer Id;
+    private Integer id;
     @NotBlank
-    private String Name;
+    private String name;
     @NotBlank
-    private String Description;
+    private String description;
     @NotBlank
-    private String imageUrl;
+    private String image_url;
+
+    private Integer cantidad;
     @NotBlank
     private String author;
 
-    private Integer cantidad;
+    private Integer editorial_id;
 
-    public String getName() { return this.Name;}
-    public void setName(String name) { this.Name = name;}
+    public String getName() {return this.name;}
+    public void setName(String name) {this.name = name;}
 
-    public String getDescription() { return this.Description;}
-    public void setDescription(String description) { this.Description = description;}
+    public Integer getId() {return this.id;}
+    public void setId(Integer id) {this.id = id;}
 
-    public String getImageUrl() { return this.imageUrl;}
-    public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl;}
+    public Integer getEditorial_id() {return  this.editorial_id;}
+    public void setEditorial_id(Integer editorial_id) {this.editorial_id = editorial_id;}
 
+    public String getDescription() {return this.description;}
+    public void setDescription(String description) {this.description = description;}
+
+    public String getImage_url() {return this.image_url;}
+    public void setImage_url(String image_url) {this.image_url = image_url;}
     public String getAuthor() { return this.author;}
     public void setAuthor(String author) { this.author = author;}
-
-    public Integer getId() { return  this.Id;}
-    public void setId(Integer Id) { this.Id = Id;}
 
     public Integer getCantidad() {return this.cantidad;}
     public void setCantidad(Integer cantidad) {this.cantidad = cantidad;}
