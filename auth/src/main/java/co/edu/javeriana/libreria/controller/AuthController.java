@@ -12,7 +12,7 @@ public class AuthController {
     @Autowired
     private AuthService authService;
 
-    @PostMapping("login")
+    @PostMapping("/login")
     public User login(@RequestParam("user") String username, @RequestParam("password") String pwd) throws Exception {
         return authService.login(username, pwd);
     }
