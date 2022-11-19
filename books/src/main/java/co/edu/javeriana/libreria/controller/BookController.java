@@ -2,16 +2,15 @@ package co.edu.javeriana.libreria.controller;
 
 import co.edu.javeriana.libreria.entity.Book;
 import co.edu.javeriana.libreria.service.BookService;
-import java.util.List;
-
-import javax.validation.Valid;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/books")
-@CrossOrigin(origins = "*", methods= {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
+@CrossOrigin(origins = "*", methods= {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE}, allowedHeaders = {"*"})
 public class BookController {
     @Autowired
     private BookService bookService;

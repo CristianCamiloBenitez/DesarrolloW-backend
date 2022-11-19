@@ -1,11 +1,13 @@
 package co.edu.javeriana.libreria.entity;
 
+    import com.fasterxml.jackson.annotation.JsonFormat;
+
     import javax.persistence.*;
     import javax.validation.constraints.NotBlank;
     import java.time.LocalDate;
 
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 // Class
 public class User {
 
@@ -18,6 +20,7 @@ public class User {
     @NotBlank
     private String activated;
 
+    @JsonFormat(pattern = "yyyy/MM/dd")
     private LocalDate fecha_nacimiento;
 
     private String name;

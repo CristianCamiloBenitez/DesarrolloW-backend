@@ -5,7 +5,7 @@ package co.edu.javeriana.libreria.entity;
     import java.time.LocalDate;
 
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 // Class
 public class User {
 

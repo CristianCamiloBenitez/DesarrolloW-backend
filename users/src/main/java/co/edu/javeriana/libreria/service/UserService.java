@@ -48,11 +48,11 @@ public class UserService {
 
         User user = userRepository.findUserByUsername(username);
         if(user.getActivated().equals("FALSE"))
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "User already deactivated");
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "User already desactivated");
 
         user.setActivated("FALSE");
         userRepository.save(user);
-        return "deactivated user " + username;
+        return "desactivated user " + username;
     }
 
     // PUT ACTIVATE
